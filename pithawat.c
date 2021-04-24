@@ -120,7 +120,7 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("\nEnter the employee student to modify: ");
+                printf("\nEnter the student id to modify: ");
                 scanf("%d", &studentid);
                 rewind(fp);
                 while(fread(&s,recsize,1,fp)==1)  /// fetch all record from file
@@ -148,21 +148,20 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("\nEnter StudentID of employee to delete: ");
+                int status = 1;
+                printf("\nEnter StudentID to delete: ");
                 scanf("%d",&studentid);
                 ft = fopen("Temp.dat","wb");  /// create a intermediate file for temporary storage
                 rewind(fp); /// move record to starting of file
                 while(fread(&s,recsize,1,fp) == 1)  /// read all records from file
                 {
-                    if(s.id == studentid)  /// if the entered record match
+                    if(s.id != studentid)  /// if the entered record match
                     {
-                        
-                        fwrite(&s,recsize,1,fp); /// move all records except the one that is to be deleted to temp file
-                    }
-                    else
-                    {
-                    	printf("\nID not found");
-                    	break;
+                        fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
+                        if (status){
+                            printf("ID not found");
+                            status = 0;
+                        }
                     }
                 }
                 fclose(fp);
