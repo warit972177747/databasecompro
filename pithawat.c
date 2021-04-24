@@ -154,9 +154,14 @@ int main()
                 rewind(fp); /// move record to starting of file
                 while(fread(&s,recsize,1,fp) == 1)  /// read all records from file
                 {
-                    if(s.id != studentid)  /// if the entered record match
+                    if(s.id == studentid)  /// if the entered record match
                     {
                         fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
+                    }
+                    else
+                    {
+                    	printf("\nID not found");
+                    	break;
                     }
                 }
                 fclose(fp);
@@ -164,7 +169,7 @@ int main()
                 remove("EMP.DAT"); /// remove the orginal file
                 rename("Temp.dat","EMP.DAT"); /// rename the temp file to original file name
                 fp = fopen("EMP.DAT", "rb+");
-                printf("Delete another record(y/n)");
+                printf("\nDelete another record(y/n)");
                 fflush(stdin);
                 another = getche();
             }
