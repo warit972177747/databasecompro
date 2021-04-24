@@ -27,16 +27,17 @@ int main()
     char another, choice;
 
     /** structure that represent a employee */
-    struct emp
+    struct student
     {
         char name[40]; ///name of employee
         int age; /// age of employee
-        float bs; /// basic salary of employee
+        int id; /// basic salary of employee
+        float score; /// score out of 100
     };
 
-    struct emp e; /// structure variable creation
+    struct student s; /// structure variable creation
 
-    char empname[40]; /// string to store name of the employee
+    char studentname[40]; /// string to store name of the employee
 
     long int recsize; /// size of each record of employee
 
@@ -56,13 +57,13 @@ int main()
     }
 
     /// sizeo of each record i.e. size of structure variable e
-    recsize = sizeof(e);
+    recsize = sizeof(s);
 
     /// infinite loop continues untile the break statement encounter
     while(1)
     {
         system("cls"); ///clear the console window
-        gotoxy(30,10); /// move the cursor to postion 30, 10 from top-left corner
+        gotoxy(30,10); /// move the cursor to position 30, 10 from top-left corner
         printf("1. Add Record"); /// option for add record
         gotoxy(30,12);
         printf("2. List Records"); /// option for showing existing record
@@ -87,13 +88,15 @@ int main()
             while(another == 'y')  /// if user want to add another record
             {
                 printf("\nEnter name: ");
-                scanf("%s",e.name);
+                scanf("%s",s.name);
                 printf("\nEnter age: ");
-                scanf("%d", &e.age);
-                printf("\nEnter basic salary: ");
-                scanf("%f", &e.bs);
+                scanf("%d", &s.age);
+                printf("\nEnter ID: ");
+                scanf("%d", &s.id);
+                printf("\nEnter score: ");
+                scanf("%f", &s.score);
 
-                fwrite(&e,recsize,1,fp); /// write the record in the file
+                fwrite(&s,recsize,1,fp); /// write the record in the file
 
                 printf("\nAdd another record(y/n) ");
                 fflush(stdin);
@@ -103,9 +106,9 @@ int main()
         case '2':
             system("cls");
             rewind(fp); ///this moves file cursor to start of the file
-            while(fread(&e,recsize,1,fp)==1)  /// read the file and fetch the record one record per fetch
+            while(fread(&s,recsize,1,fp)==1)  /// read the file and fetch the record one record per fetch
             {
-                printf("\n%s %d %.2f",e.name,e.age,e.bs); /// print the name, age and basic salary
+                printf("\nName: %s\t Age: %d\t ID: %d\t Score: %.2f",s.name,s.age,s.id,s.score); /// print the name, age and basic salary
             }
             getch();
             break;
@@ -115,19 +118,23 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("Enter the employee name to modify: ");
-                scanf("%s", empname);
+                printf("\nEnter the employee name to modify: ");
+                scanf("%s", studentname);
                 rewind(fp);
-                while(fread(&e,recsize,1,fp)==1)  /// fetch all record from file
+                while(fread(&s,recsize,1,fp)==1)  /// fetch all record from file
                 {
-                    if(strcmp(e.name,empname) == 0)  ///if entered name matches with that in file
+                    if(strcmp(s.name,studentname) == 0)  ///if entered name matches with that in file
                     {
-                        printf("\nEnter new name,age and bs: ");
-                        scanf("%s%d%f",e.name,&e.age,&e.bs);
+                        printf("\nEnter new name,age, ID and score: ");
+                        scanf("%s%d%d%f",s.name,&s.age,&s.id,&s.score);
                         fseek(fp,-recsize,SEEK_CUR); /// move the cursor 1 step back from current position
-                        fwrite(&e,recsize,1,fp); /// override the record
+                        fwrite(&s,recsize,1,fp); /// override the record
                         break;
                     }
+                    else{
+                    	printf("\nName not found");
+                    	break;
+					}
                 }
                 printf("\nModify another record(y/n)");
                 fflush(stdin);
@@ -140,14 +147,14 @@ int main()
             while(another == 'y')
             {
                 printf("\nEnter name of employee to delete: ");
-                scanf("%s",empname);
+                scanf("%s",studentname);
                 ft = fopen("Temp.dat","wb");  /// create a intermediate file for temporary storage
                 rewind(fp); /// move record to starting of file
-                while(fread(&e,recsize,1,fp) == 1)  /// read all records from file
+                while(fread(&s,recsize,1,fp) == 1)  /// read all records from file
                 {
-                    if(strcmp(e.name,empname) != 0)  /// if the entered record match
+                    if(strcmp(s.name,studentname) != 0)  /// if the entered record match
                     {
-                        fwrite(&e,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
+                        fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
                     }
                 }
                 fclose(fp);
