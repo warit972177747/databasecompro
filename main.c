@@ -41,6 +41,8 @@ int main()
 
     long int recsize; /// size of each record of employee
 
+    int studentid;
+
     /** open the file in binary read and write mode
     * if the file EMP.DAT already exists then it open that file in read write mode
     * if the file doesn't exit it simply create a new copy
@@ -118,12 +120,12 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("\nEnter the employee name to modify: ");
-                scanf("%s", studentname);
+                printf("\nEnter the student id to modify: ");
+                scanf("%d", &studentid);
                 rewind(fp);
                 while(fread(&s,recsize,1,fp)==1)  /// fetch all record from file
                 {
-                    if(strcmp(s.name,studentname) == 0)  ///if entered name matches with that in file
+                    if(s.id == studentid)  ///if entered name matches with that in file
                     {
                         printf("\nEnter new name,age, ID and score: ");
                         scanf("%s%d%d%f",s.name,&s.age,&s.id,&s.score);
@@ -132,7 +134,7 @@ int main()
                         break;
                     }
                     else{
-                    	printf("\nName not found");
+                    	printf("\nID not found");
                     	break;
 					}
                 }
@@ -146,15 +148,21 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("\nEnter name of employee to delete: ");
-                scanf("%s",studentname);
+                printf("\nEnter StudentID of employee to delete: ");
+                scanf("%d",&studentid);
                 ft = fopen("Temp.dat","wb");  /// create a intermediate file for temporary storage
                 rewind(fp); /// move record to starting of file
                 while(fread(&s,recsize,1,fp) == 1)  /// read all records from file
                 {
-                    if(strcmp(s.name,studentname) != 0)  /// if the entered record match
+                    if(s.id == studentid)  /// if the entered record match
                     {
-                        fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
+                        
+                        fwrite(&s,recsize,1,fp); /// move all records except the one that is to be deleted to temp file
+                    }
+                    else
+                    {
+                    	printf("\nID not found");
+                    	break;
                     }
                 }
                 fclose(fp);
@@ -162,7 +170,7 @@ int main()
                 remove("EMP.DAT"); /// remove the orginal file
                 rename("Temp.dat","EMP.DAT"); /// rename the temp file to original file name
                 fp = fopen("EMP.DAT", "rb+");
-                printf("Delete another record(y/n)");
+                printf("\nDelete another record(y/n)");
                 fflush(stdin);
                 another = getche();
             }
