@@ -125,7 +125,7 @@ int main()
             while(fread(&s,recsize,1,fp)==1)  /// read the file and fetch the record one record per fetch
             {
                 printf("|%-20.20s|%-20d|%-20d|%-20.2f|", s.name, s.age, s.id, s.score); /// print the name, age and basic salary
-                if (s.score >= 0 && s.score <= 50) printf("%-20s|\n", "F");
+                if (s.score >= 0 && s.score < 50) printf("%-20s|\n", "F");
                 else if (s.score <= 60)  printf("%-20s|\n", "D");
                 else if (s.score <= 70) printf("%-20s|\n", "C");
                 else if (s.score <= 80) printf("%-20s|\n", "B");
