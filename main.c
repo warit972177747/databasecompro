@@ -42,6 +42,8 @@ int main()
     long int recsize; /// size of each record of employee
 
     int studentid;
+    
+    char grade; /// student grade
 
     /** open the file in binary read and write mode
     * if the file EMP.DAT already exists then it open that file in read write mode
@@ -110,7 +112,12 @@ int main()
             rewind(fp); ///this moves file cursor to start of the file
             while(fread(&s,recsize,1,fp)==1)  /// read the file and fetch the record one record per fetch
             {
-                printf("\nName: %s\t Age: %d\t ID: %d\t Score: %.2f",s.name,s.age,s.id,s.score); /// print the name, age and basic salary
+                printf("\nName: %s\t Age: %d\t ID: %d\t Score: %.2f\t ",s.name,s.age,s.id,s.score); /// print the name, age and basic salary
+                if(s.score >= 0 && s.score <= 50){printf("F");}
+                else if(s.score <= 60){printf("D");}
+                else if(s.score <= 70){printf("C");}
+                else if(s.score <= 80){printf("B");}
+                else if(s.score <= 100){printf("A");}
             }
             getch();
             break;
