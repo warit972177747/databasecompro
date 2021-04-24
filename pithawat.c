@@ -149,14 +149,14 @@ int main()
             while(another == 'y')
             {
                 printf("\nEnter name of employee to delete: ");
-                scanf("%s",empname);
+                scanf("%d",&studentid);
                 ft = fopen("Temp.dat","wb");  /// create a intermediate file for temporary storage
                 rewind(fp); /// move record to starting of file
-                while(fread(&e,recsize,1,fp) == 1)  /// read all records from file
+                while(fread(&s,recsize,1,fp) == 1)  /// read all records from file
                 {
-                    if(strcmp(e.name,empname) != 0)  /// if the entered record match
+                    if(s.id != studentid)  /// if the entered record match
                     {
-                        fwrite(&e,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
+                        fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
                     }
                 }
                 fclose(fp);
