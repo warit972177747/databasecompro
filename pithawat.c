@@ -41,7 +41,7 @@ int main()
 
     long int recsize; /// size of each record of employee
 
-    int studentid;
+    int studentid, status=1;
 
     /** open the file in binary read and write mode
     * if the file EMP.DAT already exists then it open that file in read write mode
@@ -108,13 +108,29 @@ int main()
         case '2':
             system("cls");
             rewind(fp); ///this moves file cursor to start of the file
+            printf("_");
+            for (int i=1; i<=105; i++)
+                printf("_");
+            printf("\n|%21s%21s%21s%21s%21s\n", "|", "|", "|", "|", "|");
+            printf("|%12s%9s%12s%9s%12s%9s%12s%9s%12s%9s\n|", "Name", "|", "Age", "|", "ID", "|", "Score", "|", "Grade", "|");
+            for (int i=1; i<=105; i++)
+                if (!(i % 21))
+                    printf("|");
+                else
+                    printf("_");
+            printf("\n");
             while(fread(&s,recsize,1,fp)==1)  /// read the file and fetch the record one record per fetch
             {
-                printf("\nName: %s\t Age: %d\t ID: %d\t Score: %.2f",s.name,s.age,s.id,s.score); /// print the name, age and basic salary
+                printf("|%-20.20s|%-20d|%-20d|%-20.2f|", s.name, s.age, s.id, s.score); /// print the name, age and basic salary
+                if (s.score >= 0 && s.score <= 50) printf("%-20s|\n", "F");
+                else if (s.score <= 60)  printf("%-20s|\n", "D");
+                else if (s.score <= 70) printf("%-20s|\n", "C");
+                else if (s.score <= 80) printf("%-20s|\n", "B");
+                else if (s.score <= 100) printf("%-20s|\n", "A");
+                else printf("%-20s|\n", "Error");
             }
             getch();
             break;
-
         case '3':  /// if user press 3 then do editing existing record
             system("cls");
             another = 'y';
@@ -148,21 +164,22 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                int status = 1;
                 printf("\nEnter StudentID to delete: ");
-                scanf("%d",&studentid);
+                scanf("%d", &studentid);
                 ft = fopen("Temp.dat","wb");  /// create a intermediate file for temporary storage
                 rewind(fp); /// move record to starting of file
                 while(fread(&s,recsize,1,fp) == 1)  /// read all records from file
                 {
+                    if (s.id == studentid){
+                        status = 0;
+                    }
                     if(s.id != studentid)  /// if the entered record match
                     {
                         fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
-                        if (status){
-                            printf("ID not found");
-                            status = 0;
-                        }
                     }
+                }
+                if (status == 1){
+                    printf("ID not found\n");
                 }
                 fclose(fp);
                 fclose(ft);
@@ -172,6 +189,7 @@ int main()
                 printf("\nDelete another record(y/n)");
                 fflush(stdin);
                 another = getche();
+                status = 1;
             }
             break;
         case '5':
