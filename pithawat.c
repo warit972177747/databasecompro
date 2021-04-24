@@ -156,7 +156,8 @@ int main()
                 {
                     if(s.id == studentid)  /// if the entered record match
                     {
-                        fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
+                        
+                        fwrite(&s,recsize,1,fp); /// move all records except the one that is to be deleted to temp file
                     }
                     else
                     {
