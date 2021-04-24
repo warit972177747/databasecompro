@@ -43,6 +43,8 @@ int main()
 
     int studentid;
 
+    int status = 1;
+
     /** open the file in binary read and write mode
     * if the file EMP.DAT already exists then it open that file in read write mode
     * if the file doesn't exit it simply create a new copy
@@ -65,17 +67,17 @@ int main()
     while(1)
     {
         system("cls"); ///clear the console window
-        gotoxy(30, 10); /// move the cursor to position 30, 10 from top-left corner
+        gotoxy(30,10); /// move the cursor to position 30, 10 from top-left corner
         printf("1. Add Record"); /// option for add record
-        gotoxy(30, 12);
+        gotoxy(30,12);
         printf("2. List Records"); /// option for showing existing record
-        gotoxy(30, 14);
+        gotoxy(30,14);
         printf("3. Modify Records"); /// option for editing record
-        gotoxy(30, 16);
+        gotoxy(30,16);
         printf("4. Delete Records"); /// option for deleting record
-        gotoxy(30, 18);
+        gotoxy(30,18);
         printf("5. Exit"); /// exit from the program
-        gotoxy(30, 20);
+        gotoxy(30,20);
         printf("Your Choice: "); /// enter the choice 1, 2, 3, 4, 5
         fflush(stdin); /// flush the input buffer
         choice  = getche(); /// get the input from keyboard
@@ -90,7 +92,7 @@ int main()
             while(another == 'y')  /// if user want to add another record
             {
                 printf("\nEnter name: ");
-                scanf("%s", s.name);
+                scanf("%s",s.name);
                 printf("\nEnter age: ");
                 scanf("%d", &s.age);
                 printf("\nEnter ID: ");
@@ -98,7 +100,7 @@ int main()
                 printf("\nEnter score: ");
                 scanf("%f", &s.score);
 
-                fwrite(&s, recsize, 1, fp); /// write the record in the file
+                fwrite(&s,recsize,1,fp); /// write the record in the file
 
                 printf("\nAdd another record(y/n) ");
                 fflush(stdin);
@@ -137,7 +139,7 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("\nEnter the employee student to modify: ");
+                printf("\nEnter the student id to modify: ");
                 scanf("%d", &studentid);
                 rewind(fp);
                 while(fread(&s,recsize,1,fp)==1)  /// fetch all record from file
@@ -165,25 +167,32 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("\nEnter name of employee to delete: ");
-                scanf("%d",&studentid);
+                printf("\nEnter StudentID to delete: ");
+                scanf("%d", &studentid);
                 ft = fopen("Temp.dat","wb");  /// create a intermediate file for temporary storage
                 rewind(fp); /// move record to starting of file
                 while(fread(&s,recsize,1,fp) == 1)  /// read all records from file
                 {
+                    if (s.id == studentid){
+                        status = 0;
+                    }
                     if(s.id != studentid)  /// if the entered record match
                     {
                         fwrite(&s,recsize,1,ft); /// move all records except the one that is to be deleted to temp file
                     }
+                }
+                if (status == 1){
+                    printf("ID not found\n");
                 }
                 fclose(fp);
                 fclose(ft);
                 remove("EMP.DAT"); /// remove the orginal file
                 rename("Temp.dat","EMP.DAT"); /// rename the temp file to original file name
                 fp = fopen("EMP.DAT", "rb+");
-                printf("Delete another record(y/n)");
+                printf("\nDelete another record(y/n)");
                 fflush(stdin);
                 another = getche();
+                status = 1;
             }
             break;
         case '5':
