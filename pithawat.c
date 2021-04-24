@@ -148,7 +148,7 @@ int main()
             another = 'y';
             while(another == 'y')
             {
-                printf("\nEnter name of employee to delete: ");
+                printf("\nEnter StudentID of employee to delete: ");
                 scanf("%d",&studentid);
                 ft = fopen("Temp.dat","wb");  /// create a intermediate file for temporary storage
                 rewind(fp); /// move record to starting of file
