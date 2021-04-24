@@ -30,29 +30,20 @@ void title() {
     printf("OOO   O   O   O   O   O   OOOO  O   O OOOO  OOOOO");
 }
 
-void animation() { // 4 6 2
-    for (int i=0; i<2; i++) {
+void animation(int round) {
+    for (int i=0; i<round; i++) {
         system("cls");
-        system("COLOR 94");
         gotoxy(55, 15);
         printf("LOADING");
         gotoxy(57, 16);
         printf(".");
-        Sleep(500);
-        system("cls");
-        system("COLOR 96");
-        gotoxy(55, 15);
-        printf("LOADING");
-        gotoxy(57, 16);
-        printf("..");
-        Sleep(500);
-        system("cls");
-        system("COLOR 92");
-        gotoxy(55, 15);
-        printf("LOADING");
-        gotoxy(57, 16);
-        printf("...");
-        Sleep(500);
+        Sleep(150);
+        gotoxy(58, 16);
+        printf(".");
+        Sleep(150);
+        gotoxy(59, 16);
+        printf(".");
+        Sleep(150);
     }
     system("COLOR 9F");
 }
@@ -103,15 +94,15 @@ int main() {
         system("cls"); // clear the console window
         title();
         gotoxy(45, 12); // move the cursor to position 30, 10 from top-left corner
-        printf("Press '1' to Add Data Record"); // option for add record
+        printf("Press [1] to Add Data Record"); // option for add record
         gotoxy(45, 14);
-        printf("Press '2' to Show Data List"); // option for showing existing record
+        printf("Press [2] to Show Data List"); // option for showing existing record
         gotoxy(45, 16);
-        printf("Press '3' Modify Data Records"); // option for editing record
+        printf("Press [3] Modify Data Records"); // option for editing record
         gotoxy(45, 18);
-        printf("Press '4' Delete Data Records"); // option for deleting record
+        printf("Press [4] Delete Data Records"); // option for deleting record
         gotoxy(45, 20);
-        printf("Press '5' to Exit The Program"); // exit from the program
+        printf("Press [5] to Exit The Program"); // exit from the program
         gotoxy(59, 10);
         printf(" <<");
         gotoxy(55, 10);
@@ -121,7 +112,7 @@ int main() {
         switch (choice) {
         case '1': // if user press 1
             system("cls");
-            animation();
+            animation(2);
             fseek(fp, 0, SEEK_END); // search the file and move cursor to end of the file
             // here 0 indicates moving 0 distance from the end of the file
 
@@ -130,7 +121,7 @@ int main() {
                 system("cls");
                 gotoxy(40, 10);
                 printf("Enter student name: ");
-                scanf("%[^\n]", &s.name);
+                scanf("%s", &s.name);
 
                 gotoxy(40, 12);
                 printf("Enter student age: ");
@@ -147,12 +138,14 @@ int main() {
                 fwrite(&s, recsize, 1, fp); // write the record in the file
 
                 gotoxy(40, 18);
-                printf("Add another record?, press 'y' to continue.");
+                printf("[Y] Add More\t[M] Menu");
                 fflush(stdin);
                 another = getche();
             }
+            animation(1);
             break;
         case '2': // press '2' to show all data list
+            animation(2);
             system("cls");
             rewind(fp); // this moves file cursor to start of the file
             printf("_");
@@ -170,26 +163,35 @@ int main() {
                 printf("|%-20.20s|%-20d|%-20d|%-20.2f|", s.name, s.age, s.id, s.score); // print a data list for each row
                 if (s.score >= 0 && s.score < 50) // calculator for grading
                     printf("%-20s|\n", "F");
-                else if (s.score <= 60)
+                else if (s.score <= 55)
                     printf("%-20s|\n", "D");
-                else if (s.score <= 70)
+                else if (s.score <= 60)
+                    printf("%-20s|\n", "D+");
+                else if (s.score <= 65)
                     printf("%-20s|\n", "C");
-                else if (s.score <= 80)
+                else if (s.score <= 70)
+                    printf("%-20s|\n", "C+");
+                else if (s.score <= 75)
                     printf("%-20s|\n", "B");
+                else if (s.score <= 80)
+                    printf("%-20s|\n", "B+");
                 else if (s.score <= 100)
                     printf("%-20s|\n", "A");
                 else
                     printf("%-20s|\n", "Error");
             }
+            printf("\n[M] Menu");
             getch();
+            animation(1);
             break;
         case '3': // if user press 3 then do editing existing record
+            animation(2);
             system("cls");
             another = 'y';
             while (another == 'y') {
                 system("cls");
                 gotoxy(40, 10);
-                printf("Enter the student id to modify: ");
+                printf("Enter the studentID to modify: ");
                 scanf("%d", &studentid);
                 rewind(fp);
                 while (fread(&s, recsize, 1, fp) == 1) { // fetch all record from file
@@ -211,27 +213,30 @@ int main() {
                         scanf("%f", &s.score);
 
                         gotoxy(40, 20);
-                        printf("[Y] Try Again\t[N] Menu");
+                        printf("[Y] Modify More\t[M] Menu");
                         fflush(stdin);
                         another = getche();
 
                         fseek(fp, -recsize, SEEK_CUR); // move the cursor 1 step back from current position
                         fwrite(&s, recsize, 1, fp); // override the record
+                        animation(1);
                         break;
                     } else {
                         gotoxy(40, 12);
-                    	printf("StudentID \"%d\" not found", studentid);
+                    	printf("Sorry, studentID \"%d\" not found", studentid);
 
                         gotoxy(40, 14);
-                        printf("Modify another record?, press 'y' to continue.");
+                        printf("[Y] Try Again [M] Menu");
                         fflush(stdin);
                         another = getche();
+                        animation(1);
                     	break;
 					}
                 }
             }
             break;
         case '4': // press '4' to delete data by studentID
+            animation(2);
             system("cls");
             another = 'y';
             while (another == 'y') {
@@ -249,22 +254,25 @@ int main() {
                 }
                 if (status == 1) {
                     gotoxy(40, 14);
-                    printf("StudentID \"%d\" not found", studentid);
+                    printf("Sorry, studentID \"%d\" not found", studentid);
+                    gotoxy(40, 16);
+                    printf("[Y] Try Again\t[M] Menu");
                 } else {
                     gotoxy(40, 14);
-                    printf("StudentID \"%d\" has deleted", studentid);
+                    printf("Success!, studentID \"%d\" has deleted", studentid);
+                    gotoxy(40, 16);
+                    printf("[Y] Delete More\t[M] Menu");
                 }
                 fclose(fp);
                 fclose(ft);
                 remove("EMP.DAT"); // remove the orginal file
                 rename("Temp.dat", "EMP.DAT"); // rename the temp file to original file name
                 fp = fopen("EMP.DAT", "rb+");
-                gotoxy(40, 16);
-                printf("Delete another record?, press 'y' to continue.");
                 fflush(stdin);
                 another = getche();
                 status = 1;
             }
+            animation(1);
             break;
         case '5': // exit from app
             fclose(fp); // close the file
