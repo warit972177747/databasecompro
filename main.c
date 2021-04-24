@@ -111,11 +111,12 @@ int main()
             system("cls");
             rewind(fp); ///this moves file cursor to start of the file
             printf("_");
-            for (int i=1; i<=105; i++)
+            int i;
+            for (i=1; i<=105; i++)
                 printf("_");
             printf("\n|%21s%21s%21s%21s%21s\n", "|", "|", "|", "|", "|");
             printf("|%12s%9s%12s%9s%12s%9s%12s%9s%12s%9s\n|", "Name", "|", "Age", "|", "ID", "|", "Score", "|", "Grade", "|");
-            for (int i=1; i<=105; i++)
+            for (i=1; i<=105; i++)
                 if (!(i % 21))
                     printf("|");
                 else
