@@ -195,7 +195,9 @@ int main() {
                 scanf("%d", &studentid);
                 rewind(fp);
                 while (fread(&s, recsize, 1, fp) == 1) { // fetch all record from file
+                    status = 1;
                     if (s.id == studentid) { // if entered name matches with that in file
+                        status = 0;
                         gotoxy(40, 12);
                         printf("Enter new name: ");
                         scanf("%s", &s.name);
@@ -221,17 +223,17 @@ int main() {
                         fwrite(&s, recsize, 1, fp); // override the record
                         animation(1);
                         break;
-                    } else {
-                        gotoxy(40, 12);
-                    	printf("Sorry, studentID \"%d\" not found", studentid);
+                    }
+                }
+                if (status) {
+                    gotoxy(40, 12);
+                    printf("Sorry, studentID \"%d\" not found", studentid);
 
-                        gotoxy(40, 14);
-                        printf("[Y] Try Again [M] Menu");
-                        fflush(stdin);
-                        another = getche();
-                        animation(1);
-                    	break;
-					}
+                    gotoxy(40, 14);
+                    printf("[Y] Try Again [M] Menu");
+                    fflush(stdin);
+                    another = getche();
+                    animation(1);
                 }
             }
             break;
@@ -255,19 +257,14 @@ int main() {
                 if (status == 1) {
                     gotoxy(40, 14);
                     printf("Sorry, studentID \"%d\" not found", studentid);
-                    gotoxy(40, 16);
-                    printf("[Y] Try Again\t[M] Menu");
-                } else {
-                    gotoxy(40, 14);
-                    printf("Success!, studentID \"%d\" has deleted", studentid);
-                    gotoxy(40, 16);
-                    printf("[Y] Delete More\t[M] Menu");
                 }
                 fclose(fp);
                 fclose(ft);
                 remove("EMP.DAT"); // remove the orginal file
                 rename("Temp.dat", "EMP.DAT"); // rename the temp file to original file name
                 fp = fopen("EMP.DAT", "rb+");
+                gotoxy(40, 16);
+                printf("[Y] Try Again\t[M] Menu");
                 fflush(stdin);
                 another = getche();
                 status = 1;
