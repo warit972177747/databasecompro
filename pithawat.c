@@ -3,7 +3,6 @@
 #include <conio.h>
 #include <windows.h> // for windows related functions (not important)
 #include <string.h> // string operations
-
 /* List of Global Variable */
 COORD coord = {0, 0}; // top-left corner of window
 
@@ -31,7 +30,8 @@ void title() {
 }
 
 void animation(int round) {
-    for (int i=0; i<round; i++) {
+    int i;
+    for (i=0; i<round; i++) {
         system("cls");
         gotoxy(55, 15);
         printf("LOADING");
@@ -72,7 +72,7 @@ int main() {
 
     char studentid[11];
 
-    int status = 1;
+    int status = 1,i;
 
     /*  open the file in binary read and write mode
         if the file EMP.DAT already exists then it open that file in read write mode
@@ -149,11 +149,11 @@ int main() {
             system("cls");
             rewind(fp); // this moves file cursor to start of the file
             printf("_");
-            for (int i=1; i<=105; i++)
+            for (i=1; i<=105; i++)
                 printf("_");
             printf("\n|%21s%21s%21s%21s%21s\n", "|", "|", "|", "|", "|");
             printf("|%12s%9s%12s%9s%12s%9s%12s%9s%12s%9s\n|", "Name", "|", "Age", "|", "ID", "|", "Score", "|", "Grade", "|"); // table creation
-            for (int i=1; i<=105; i++)
+            for (i=1; i<=105; i++)
                 if (!(i % 21))
                     printf("|");
                 else
