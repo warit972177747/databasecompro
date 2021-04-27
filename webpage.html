@@ -1,5 +1,5 @@
-<html>
-    <title>Computer Programming</title>
+<html lang="en" lang="th">
+    <title>Student Grading - DATA BASE</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
@@ -10,43 +10,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <body>
-        <div class="head-contain">
-            <div class="head"><img src="https://cdn.discordapp.com/attachments/750412142351614163/835573192063713280/asfasjdfasdj_prev_ui.png" class="data-base-picture">
-                DATA BASE <span style="color: #f7b02a; font-size: 56px; z-index: -2;"> Student Grading Application</span>
+        <div class="head-contain" id="page-1">
+            <div class="head-title">
+                <img src="https://cdn.discordapp.com/attachments/750412142351614163/835573192063713280/asfasjdfasdj_prev_ui.png" class="data-base-picture">
+                <h2>DATA BASE <span style="color: #f7b02a; font-size: 48px;"> Student Grading Application</span></h2>
             </div>
-            <div class="under-head">
+            <div class="under-head"></div>
         </div>
+
         <div class="body-contain">
             <div class="page-bar">
-                <a href="#page-1" class="direction"><div class="botton">Application</div></a>
-                <a href="#page-2" class="direction"><div class="botton">Decribe</div></a>
-                <a href="#page-3" class="direction"><div class="botton">Guide</div></a>
-                <a href="#page-4" class="direction"><div class="botton">Source</div></a>
-                <a href="#page-5" class="direction"><div class="botton">About</div></a>
-                <a href="#page-6" class="direction"><div class="botton">Contact</div></a>
+                <a href="#page-1"><div class="page-bar-direction">Overview</div></a>
+                <a href="#page-2"><div class="page-bar-direction">Decribe</div></a>
+                <a href="#page-3"><div class="page-bar-direction">Guide</div></a>
+                <a href="#page-4"><div class="page-bar-direction">Source</div></a>
+                <a href="#page-5"><div class="page-bar-direction">About</div></a>
+                <a href="#page-6"><div class="page-bar-direction">Contact</div></a>
             </div>
             <div class="material">
-                <h1 id="page-1" class="preview">Student Grading Application</h1>
+                <h1 class="preview">Student Grading Application</h1>
                 <div class="application-contain">
                     <a href="https://raw.githubusercontent.com/warit972177747/databasecompro/main/main.c" target="_blank">
-                        <div class="application-botton" style="animation-duration: 1.4s">
+                        <div class="application-botton" style="animation-delay: 0.2s">
                             <img src="https://cdn.discordapp.com/attachments/750412142351614163/836276534141911100/code.png" class="application-link-picture">
                             <h1 class="">Code (text)</h1>
                         </div>
                     </a>
                     <a href="https://github.com/warit972177747/databasecompro.git" target="_blank">
-                        <div class="application-botton" style="animation-duration: 1.2s">
+                        <div class="application-botton" style="animation-delay: 0.4s">
                             <img src="https://cdn.discordapp.com/attachments/750412142351614163/836276532430897192/share.png" class="application-link-picture">
                             <h1 class="">Github Repository</h1>
                         </div>
                     </a>
                     <a href="https://drive.google.com/file/d/1VXxy7FyldjdrcQwwP8ADDhu0NyOcAwVe/view" target="_blank">
-                        <div class="application-botton" style="animation-duration: 1s">
+                        <div class="application-botton" style="animation-delay: 0.6s">
                             <img src="https://cdn.discordapp.com/attachments/750412142351614163/836278370110144532/1628182.png" class="application-link-picture">
                             <h1 class="">C Compiler</h1>
                         </div>
                     </a>
                 </div>
+                <div class="body-line"></div>
 
                 <h2 id="page-2"><br><br>คำอธิบายโปรเจกต์</h2>
                 <p>เนื่องจากในปัจจุบันข้อมูลนั้นมีมากมายหลายประเภท จึงใช้ทรัพยากรในการจัดเก็บมากตามปริมาณของข้อมูล
@@ -64,7 +67,7 @@
                     อย่างมาก ทั้งด้าน หน้าบ้านและหลังบ้าน และอัลกอริทึมในการเขียนโปรแกรมเพิ่มเติม</p>
                 
                 <h2 id="page-3"><br><br>คู่มือการใช้งาน</h2>
-                <p>เริ่มจากการ compile code แล้วจะมีไฟล์ตระกูล .exe แล้วกดเข้าใช้แอพพลิเคชั่นได้เลย
+                    <p>เริ่มจากการ compile code แล้วจะมีไฟล์ตระกูล .exe แล้วกดเข้าใช้แอพพลิเคชั่นได้เลย
                     แอพพิลเคชั่นนี่ใช้ในการเก็บข้อมูลของนักศึกษาซึ่งมีฟังก์ชันให้เลือก 4 ฟังก์ชัน
                     <br>
                     <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280924610101278/unknown.png">
@@ -77,14 +80,14 @@
                     <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280785249370112/unknown.png">
                         <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280785249370112/unknown.png" class="guide-app-picture">
                     </a>
-                    <br>2.ถ้าหากต้องการเปิดดูข้อมูลที่ใส่เข้าไปในโปรแกรมให้กดเลข 2 บนคีบอร์ดและ
+                    <br>2. ถ้าหากต้องการเปิดดูข้อมูลที่ใส่เข้าไปในโปรแกรมให้กดเลข 2 บนคีบอร์ดและ
                     จากนั้นจะมีตารางที่ใส่ข้อมูลที่เรากรอกขึ้นไปมาให้ดู และถ้าต้องการกลับหน้า
                     เมนูให้กดปุ่ม 'M'
                     <br>
                     <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280878798733422/unknown.png">
                         <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280878798733422/unknown.png" class="guide-app-picture">
                     </a>
-                    <br>3.เป็นฟังก์ชันแก้ไขหรือ Modify ข้อมูลถ้าหากใช้ให้กดปุ่มเลข 3 บนคีบอร์ด
+                    <br>3. เป็นฟังก์ชันแก้ไขหรือ Modify ข้อมูลถ้าหากใช้ให้กดปุ่มเลข 3 บนคีบอร์ด
                     และใส่รหัสนักศึกษาที่เราต้องการแก้ไขถ้าหากใส่ไม่ถูกต้องจะมีให้กด 'Y' เพื่อใส่อีกครั้ง
                     และกด 'M' เพื่อกลับเมนูแต่ถ้าหากใส่ถูกต้องจะขึ้นให้ใส่ ชื่อ อายุ เลขนักศึกษา และ คะแนน
                     และเมื่อแก้ไขเสร็จและอยากใส่เพิ่มให้กด 'Y' เพื่อแก้คนอื่นแต่ถ้ากลับเมนูให้กด 'M'
@@ -92,7 +95,7 @@
                     <a href="https://cdn.discordapp.com/attachments/750412142351614163/836281126955515944/unknown.png">
                         <img src="https://cdn.discordapp.com/attachments/750412142351614163/836281126955515944/unknown.png" class="guide-app-picture">
                     </a>
-                    <br>4.เป็นฟังก์ชันลบหรือ delete ข้อมูลถ้าหากต้องการใช้ให้กดปุ่มเลข 4 บนคีบอร์ด
+                    <br>4. เป็นฟังก์ชันลบหรือ delete ข้อมูลถ้าหากต้องการใช้ให้กดปุ่มเลข 4 บนคีบอร์ด
                     และใส่รหัสนักศึกษาที่เราต้องการลบทิ้งถ้าใส่ไม่ถูกจะมีให้กด 'Y' เพื่อใส่อีกครั้ง
                     และกด 'M' เพื่อกลับเมนูแต่ถ้าหากใส่ถูกก็จะถามว่าถ้าอยากลบเพิ่มให้กดปุ่ม 'Y'
                     แต่ถ้าไม่ต้องการให้กดปุ่ม 'M'
@@ -100,24 +103,25 @@
                     <a href="https://cdn.discordapp.com/attachments/750412142351614163/836281266969509978/unknown.png">
                         <img src="https://cdn.discordapp.com/attachments/750412142351614163/836281266969509978/unknown.png" class="guide-app-picture">
                     </a>
-                    <br>5.ถ้าหากเราต้องการออกจากแอพพลิเคชั่นก็สามารถทำได้โดยกดเลข 5 บนคีบอร์ด
+                    <br>5. ถ้าหากเราต้องการออกจากแอพพลิเคชั่นก็สามารถทำได้โดยกดเลข 5 บนคีบอร์ด
                     <h3>วิดีโอสาธิต</h3>
                     <iframe class="video" src="https://www.youtube.com/embed/3Bp56ILjrxM"></iframe>
+
                 <h2 id="page-4"><br><br>โค้ดต้นฉบับ</h2>
                 <h3>Employee Record System</h3>
-                <p>Employee Record System คือ Application ขยาดย่อมที่มี UI เป็น Terminla และสามารถสั่งการรับค่าจาก keyboard เท่า
-                    โดยตัว Application เป็นการเก็บข้อมูลหรือสถิติต่างๆ เป็นข้อมูลประเภท ข้อความ จำนวนเต็มหรือจำนวนจริง และสามารถนำคำนวนเพิ่มเติมได้
+                <p>Employee Record System คือ Application ขยาดย่อมที่มี UI เป็น Terminal และสามารถสั่งการรับค่าจาก keyboard เท่านั้น
+                    โดยตัว Application สามารถการเก็บข้อมูลหรือสถิติต่างๆ ไม่ว่าจะเป็นเป็นข้อมูลประเภท ข้อความ จำนวนเต็มหรือจำนวนจริง และสามารถนำมาคำนวนเพิ่มเติมได้
                     ตัว Application ถูกเขียนมาด้วยภาษา C ทั้งหมด โดยตัว Application สามารถเพิ่มข้อมูล แก้ไข ลบ หรือแสดงข้อมูลในรูปของตารางได้
                     หากต้องการสร้างฐานข้อมูลที่มี category ก็สามารถนำไปต่อยอดได้เพิ่มขึ้นโดยใช้เพียงแค่ภาษา C ภาษาเดียวก็สามารถสร้างได้</p>
                 <img src="https://www.codewithc.com/wp-content/uploads/2014/04/main-menu2.png" class="source-app-picture">
                 <img src="https://www.codewithc.com/wp-content/uploads/2014/04/add-employee-record.png" class="source-app-picture">
-                <a href="https://github.com/warit972177747/databasecompro/blob/main/source.c" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://github.com/warit972177747/databasecompro/blob/main/source.c" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://cdn.discordapp.com/attachments/750412142351614163/835827784554643497/git-repository-icon-github-repo-icon-svg-115534438372aunh6vf0u_1.png" class="picture-icon" style="border-radius: 0px;">
                         <p>Source Code - Github</p>
                     </div>
                 </a>
-                <a href="https://www.codewithc.com/mini-project-in-c-employee-record-system/" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://www.codewithc.com/mini-project-in-c-employee-record-system/" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://static.thenounproject.com/png/2391755-200.png" class="picture-icon" style="border-radius: 0px;">
                         <p>Source Code - Website</p>
@@ -125,59 +129,59 @@
                 </a>
                 <h2 id="page-5"><br><br>เกี่ยวกับ</h2>
                 <h3>คณะผู้จัดทำ</h3>
-                <a href="https://github.com/pithawat565" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://github.com/pithawat565" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon">
                         <p>นายพิทวัท นุชคง รหัสนักศึกษา 63070118</p>
                     </div>
                 </a>
-                <a href="https://github.com/panupongkeawkam" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://github.com/panupongkeawkam" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon">
                         <p>นายภาณุพงศ์ แก้วคำ รหัสนักศึกษา 63070132</p>
                     </div>
                 </a>
-                <a href="https://github.com/rip086336" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://github.com/rip086336" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon">
                         <p>นายยศพล เอี่ยมอ่อน รหัสนักศึกษา 63070142</p>
                     </div>
                 </a>
-                <a href="https://github.com/warit972177747" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://github.com/warit972177747" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon">
                         <p>นายวริศ อมรธนะภิญโญ รหัสนักศึกษา 63070157</p>
                     </div>
                 </a>
                 <h3>สถานศึกษา</h3>
-                <a href="http://kmitl.ac.th/en" target="_blank" style="text-decoration: none; color: black;">
+                <a href="http://kmitl.ac.th/en" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://www.wallofsharing.com/wp-content/uploads/2019/10/kmitl_logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
                         <p>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหาร ลาดกระบัง</p>
                     </div>
                 </a>
                 <h3>คณะ</h3>
-                <a href="https://www.it.kmitl.ac.th/th/" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://www.it.kmitl.ac.th/th/" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/it-logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
                         <p>เทคโนโลยีสารสนเทศ</p>
                     </div>
                 </a>
                 <h3>ภาควิชา</h3>
-                <a href="https://www.it.kmitl.ac.th/subjects/6016315-computer-programming/" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://www.it.kmitl.ac.th/subjects/6016315-computer-programming/" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://www.pngkit.com/png/full/101-1010012_c-programming-icon-c-programming-language-logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
                         <p>Computer Programming</p>
                     </div>
                 </a>
                 <h3>อาจารย์ประจำวิชา</h3>
-                <a href="https://www.it.kmitl.ac.th/th/staff/panwit/" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://www.it.kmitl.ac.th/th/staff/panwit/" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/Panwit-300x300.jpg" class="picture-icon">
                         <p>อาจารย์ปานวิทย์ ธุวะนุติ</p>
                     </div>
                 </a>
-                <a href="https://www.it.kmitl.ac.th/th/staff/kitsuchart/" target="_blank" style="text-decoration: none; color: black;">
+                <a href="https://www.it.kmitl.ac.th/th/staff/kitsuchart/" target="_blank" class="unline-linking">
                     <div class="link-tage">
                         <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2018/03/Kitsuchart-300x300.jpg" class="picture-icon">
                         <p>อาจารย์กิติ์สุชาต พสุภา</p>
@@ -192,14 +196,14 @@
                 <br>คณะเทคโนโลยีสารสนเทศ - สจล.
                 <br>รหัสนักศึกษา 63070118
                 </p>
-                <!-- <a href="" target="_blank"> -->
+                <a href="mailto: @gmail.com" target="_blank">
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158391285186630/email.png" class="foot-contact-icon">
                 </a>
                 <!-- <a href="" target="_blank"> -->
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158396200910858/facebook.png" class="foot-contact-icon">
                 </a>
                 <!-- <a href="" target="_blank"> -->
-                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836157621924528138/discord.png" class="foot-contact-icon">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836533862515212298/line.png" class="foot-contact-icon">
                 </a>
             </div>
             <div class="foot-contact-info">
@@ -207,14 +211,14 @@
                 <br>คณะเทคโนโลยีสารสนเทศ - สจล.
                 <br>รหัสนักศึกษา 63070132
                 </p>
-                <a href="https://mail.google.com/mail/u/0/?pli=1#drafts?compose=GTvVlcRwPkQsSkrpBCrRhnkBGRdvLjjTgLXQRplfmwlDshLjlLdtFzTjRKqFZTcflbBGFQgPbvQbd" target="_blank">
+                <a href="mailto: wpeoinrdb2544@gmail.com" target="_blank">
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158391285186630/email.png" class="foot-contact-icon">
                 </a>
                 <a href="https://www.facebook.com/panupongkeawkam/" target="_blank">
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158396200910858/facebook.png" class="foot-contact-icon">
                 </a>
-                <a href="" target="_blank">
-                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836157621924528138/discord.png" class="foot-contact-icon">
+                <a href="https://line.me/ti/p/zHU06SiZB_#~" target="_blank">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836533862515212298/line.png" class="foot-contact-icon">
                 </a>
             </div>
             <div class="foot-contact-info">
@@ -222,14 +226,14 @@
                 <br>คณะเทคโนโลยีสารสนเทศ - สจล.
                 <br>รหัสนักศึกษา 63070142
                 </p>
-                <!-- <a href="" target="_blank"> -->
+                <a href="mailto: @gmail.com" target="_blank">
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158391285186630/email.png" class="foot-contact-icon">
                 </a>
                 <!-- <a href="" target="_blank"> -->
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158396200910858/facebook.png" class="foot-contact-icon">
                 </a>
                 <!-- <a href="" target="_blank"> -->
-                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836157621924528138/discord.png" class="foot-contact-icon">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836533862515212298/line.png" class="foot-contact-icon">
                 </a>
             </div>
             <div class="foot-contact-info">
@@ -237,14 +241,14 @@
                 <br>คณะเทคโนโลยีสารสนเทศ - สจล.
                 <br>รหัสนักศึกษา 63070157
                 </p>
-                <!-- <a href="" target="_blank"> -->
+                <a href="mailto: @gmail.com" target="_blank">
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158391285186630/email.png" class="foot-contact-icon">
                 </a>
                 <!-- <a href="" target="_blank"> -->
                     <img src="https://cdn.discordapp.com/attachments/750412142351614163/836158396200910858/facebook.png" class="foot-contact-icon">
                 </a>
                 <!-- <a href="" target="_blank"> -->
-                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836157621924528138/discord.png" class="foot-contact-icon">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836533862515212298/line.png" class="foot-contact-icon">
                 </a>
             </div>
         </div>
@@ -255,16 +259,12 @@
             scroll-behavior: smooth;
         }
         body {
-            font-size: 100%;
             margin: auto;
             width: 100%;
-            height: auto;
-            background: #bababa;
+            /* background: #bababa; */
+            background: #d5d5d5;
         }
-        p {
-            text-indent: 3%;
-        }
-        h3 {
+        h3, p {
             font-weight: normal;
             text-indent: 3%;
         }
@@ -274,84 +274,72 @@
 
         .head-contain {
             width: 100%;
-            height: 148px;
+            height: 112px;
         }
-        .head {
-            margin: auto;
+        .head-title {
             background: #0e264d;
             width: 100%;
-            height: 80%;
-            text-indent: 2%;
+            height: 90%;
             font-family: 'Quicksand', sans-serif;
-            font-size: 72px;
+            font-size: 48px;
             color: #dbdbdb;
         }
         .data-base-picture {
-            margin-top: 20px;
+            margin: 16px;
             width: 60px;
             height: 60px;
+            float: left;
         }
         .under-head {
-            z-index: -4;
             background: #f7b02a; 
             width: 100%;
-            height: 20%;
+            height: 10%;
         }
 
         .page-bar {
-            position: sticky;
             top: 0;
-            z-index: 10;
-            margin: auto;
+            z-index: 5;
+            position: sticky;
             text-align: center;
-            background: #2e2e2e; 
-            opacity: 80%;
             width: 100%;
-            height: 48px;
+            height: 2.4vw;
         }
-        .direction {
+        .page-bar-direction {
+            height: 100%;
+            width: 16.666666%;
+            background: hsl(0, 0%, 0%, 80%);
+            font-size: 1.4vw;
+            color: #dbdbdb;
             font-family: 'Kanit', sans-serif;
             text-decoration: none;
-            font-size: 26px;
-            color: #dbdbdb;
+            opacity: 80%;
+            margin: auto;
+            float: left;
         }
-        .direction:hover {
+        .page-bar-direction:hover {
             color: #f7b02a;
             font-size: 28px;
-        }
-        .botton {
-            margin: auto;
-            background: hsl(136, 0%, 50%, 0%);
-            height: 100%;
-            float: left;
-            text-align: center;
-            width: 16.666666%;
-        }
-        .botton:hover {
             transition: 0.3s;
-            background: hsl(136, 0%, 50%, 50%);
+            background: hsl(0, 0%, 0%, 90%);
             cursor: pointer;
         }
 
         .body-contain {
-            width: 60%;
+            width: 64%;
             margin: auto;
-            height: 5112px;
+            height: 5200px;
             background: #dbdbdb;
         }
         .material {
             font-family: 'Kanit', sans-serif;
             margin: 5%;
             width: 90%;
-            height: 100%;
         }
         .application-contain {
             width: 100%;
-            margin: auto;
             height: 272px;
         }
         .application-botton {
-            position: relative;
             text-align: center;
             float: left;
             width: 28%;
@@ -360,13 +348,22 @@
             margin: 2.6%;
             font-size: 12px;
             border-radius: 8px;
-            animation-name: div-slide;
+            animation: up-down 1s infinite alternate;
         }
         .application-botton:hover {
             transform-origin: center;
             transform: scale(1.04);
-            transition: 0.3s;
+            transition: 0.1s;
+            color: #f7b02a;
+        }
+        .body-line {
+            margin: auto;
+            margin-top: 48px;
+            width: 86%;
+            height: 4px;
+            border-radius: 8px;
             background: #bababa;
+            animation: up-down 1.5s infinite alternate;
         }
 
         .link-tage {
@@ -392,7 +389,7 @@
             width: 40px;
             position: relative;
         }
-        .member {
+        .unline-linking {
             color: black;
             text-decoration: none;
         }
@@ -404,9 +401,8 @@
             background: #2e2e2e;
         }
         .foot-title {
+            padding: 16px;
             margin: auto;
-            padding: 10px;
-            text-indent: 5%;
             font-family: 'Quicksand', sans-serif;
             font-size: 48px;
             color: #dbdbdb;
@@ -445,36 +441,27 @@
             width: 40%;
         }
         .guide-app-picture {
-            margin-top: 12px;
-            margin-bottom: 12px;
+            margin-top: 16px;
+            margin-bottom: 16px;
             width: 50%;
         }
         .application-link-picture {
-            width: 70%;
-            margin-top: 6%;
+            width: 60%;
         }
+        .video {
+            width: 50vw;
+            margin: 6px;
+            height: 28.125vw;
+        }
+
         .preview {
             color: #0e264d;
             opacity: 100%;
-            animation-name: text-slide;
+            animation-name: slide-up;
             animation-duration: 1s;
         }
-        .video {
-            width: 960px;
-            margin: 6px;
-            height: 540px;
-        }
-        @keyframes div-slide {
-            from {
-                transform: translateX(-64px) scale(0.5);
-                opacity: 0%;
-            }
-            to {
-                transform: translateX(0px) scale(1);
-                opacity: 100%;
-            }
-        }
-        @keyframes text-slide {
+
+        @keyframes slide-up {
             from {
                 transform: translateY(32px);
                 opacity: 0%;
@@ -482,6 +469,14 @@
             to {
                 transform: translateY(0px);
                 opacity: 100%;
+            }
+        }
+        @keyframes up-down {
+            from {
+                transform: translateY(0px);
+            }
+            to {
+                transform: translateY(4px);
             }
         }
     </style>
