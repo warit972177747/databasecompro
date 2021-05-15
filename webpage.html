@@ -3,8 +3,6 @@
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,181 +11,180 @@
         <div class="head-title" id="page-1">
             <img src="https://cdn.discordapp.com/attachments/750412142351614163/835573192063713280/asfasjdfasdj_prev_ui.png" class="data-base-picture">
             DATA BASE <span style="color: var(--color-1); font-size: 52px;"> Student Grading Application</span>
-            <div id="pad" class="pad-mode-off" onclick="myFunction()"></div>
-            <div id="dot" class="dot-mode-off" onclick="myFunction()"></div>
+            <div id="pad" class="pad-mode-off" onclick="themeMode()"></div>
+            <div id="dot" class="dot-mode-off" onclick="themeMode()"></div>
         </div>
         <div class="under-head"></div>
 
-        <div id="main" class="body-contain">
-            <div class="page-bar">
-                <a href="#page-1"><div class="page-bar-direction">Overview</div></a>
-                <a href="#page-2"><div class="page-bar-direction">Decribe</div></a>
-                <a href="#page-3"><div class="page-bar-direction">Guide</div></a>
-                <a href="#page-4"><div class="page-bar-direction">Source</div></a>
-                <a href="#page-5"><div class="page-bar-direction">About</div></a>
-                <a href="#page-6"><div class="page-bar-direction">Contact</div></a>
+        <div class="page-bar">
+            <a href="#page-1"><div class="page-bar-direction">Overview</div></a>
+            <a href="#page-2"><div class="page-bar-direction">Decribe</div></a>
+            <a href="#page-3"><div class="page-bar-direction">Guide</div></a>
+            <a href="#page-4"><div class="page-bar-direction">Source</div></a>
+            <a href="#page-5"><div class="page-bar-direction">About</div></a>
+            <a href="#page-6"><div class="page-bar-direction">Contact</div></a>
+        </div>
+
+        <div id="main" class="material">
+            <h1 class="preview">Student Grading Application</h1>
+            <div class="application-contain">
+                <a href="https://raw.githubusercontent.com/warit972177747/databasecompro/main/main.c" target="_blank">
+                    <div class="application-button" style="animation-delay: 0.2s">
+                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836276534141911100/code.png" class="application-link-picture">
+                        <h1 class="">Code (text)</h1>
+                    </div>
+                </a>
+                <a href="https://github.com/warit972177747/databasecompro.git" target="_blank">
+                    <div class="application-button" style="animation-delay: 0.4s">
+                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836276532430897192/share.png" class="application-link-picture">
+                        <h1 class="">Github Repository</h1>
+                    </div>
+                </a>
+                <a href="https://drive.google.com/file/d/1VXxy7FyldjdrcQwwP8ADDhu0NyOcAwVe/view" target="_blank">
+                    <div class="application-button" style="animation-delay: 0.6s">
+                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836278370110144532/1628182.png" class="application-link-picture">
+                        <h1 class="">C Compiler</h1>
+                    </div>
+                </a>
             </div>
-            <div class="material">
-                <h1 class="preview">Student Grading Application</h1>
-                <div class="application-contain">
-                    <a href="https://raw.githubusercontent.com/warit972177747/databasecompro/main/main.c" target="_blank">
-                        <div class="application-button" style="animation-delay: 0.2s">
-                            <img src="https://cdn.discordapp.com/attachments/750412142351614163/836276534141911100/code.png" class="application-link-picture">
-                            <h1 class="">Code (text)</h1>
-                        </div>
-                    </a>
-                    <a href="https://github.com/warit972177747/databasecompro.git" target="_blank">
-                        <div class="application-button" style="animation-delay: 0.4s">
-                            <img src="https://cdn.discordapp.com/attachments/750412142351614163/836276532430897192/share.png" class="application-link-picture">
-                            <h1 class="">Github Repository</h1>
-                        </div>
-                    </a>
-                    <a href="https://drive.google.com/file/d/1VXxy7FyldjdrcQwwP8ADDhu0NyOcAwVe/view" target="_blank">
-                        <div class="application-button" style="animation-delay: 0.6s">
-                            <img src="https://cdn.discordapp.com/attachments/750412142351614163/836278370110144532/1628182.png" class="application-link-picture">
-                            <h1 class="">C Compiler</h1>
-                        </div>
-                    </a>
+            <div class="body-line"></div>
+
+            <h2 id="page-2"><br><br>คำอธิบายโปรเจกต์</h2>
+            <p>เนื่องจากในปัจจุบันข้อมูลนั้นมีมากมายหลายประเภท จึงใช้ทรัพยากรในการจัดเก็บ
+                มากตามปริมาณของข้อมูลจึงมีหลายคนพยายามคิดค้นนวัตกรรมใหม่ๆเพื่อลดการใช้
+                ทรัพยากรที่ใช้จัดเก็บข้อมูลได้อย่างมีประสิทธิภาพเป็นระเบียบ และง่ายต่อการใช้งาน</p>
+            <p>เราจึงได้นำโปรแกรมจัดเก็บข้อมูลมาต่อยอดให้ใช้สำหรับจัดเก็บข้อมูลของนักศึกษา โดยมีประเภทข้อมูล
+                ดังนี้ชื่อ อายุ รหัสนักศึกษา คะแนนและเกรด โปรแกรมนี้สามารถจัดการข้อมูลได้โดยการ เพิ่ม ลบ แก้ไข และ
+                แสดงผลข้อมูลเป็นตาราง สร้างความสะดวกสบายให้กับผู้ใช้งานเพราะไม่ต้องจัดเก็บด้วยตัวเอง และไม่เปลือง
+                ทรัพยากรธรรมชาติ เพราะสามารถใช้คอมพิวเตอร์แทนกระดาษในการจัดเก็บได้เพิ่มความปลอดภัยให้กับข้อมูล
+                โดยโปรแกรมของเรานั้นมีจุดเด่นที่ UI สบายตา ใช้ง่าย เป็นมิตรกับผู้ใช้งาน</p>
+            <p>โดยสาเหตุที่เราเลือกทำโครงงานนี้ เพราะว่าเราอยากศึกษาภาษาที่ใช้ในการพัฒนาโปรแกรม นั่นคือภาษา
+                C โดยเราได้นำโปรแกรมจัดเก็บข้อมูลของคนอื่นมาต่อยอดและปรับแต่งใหม่ให้เป็นมิตรกับผู้ใช้งานยิ่งขึ้น โดยการ
+                เพิ่มสีสัน เพิ่มตารางในการแสดงผลข้อมูล เปลี่ยนอัลกอริทึม ฯลฯ</p>
+            <p>ผลลัพธ์จากการพัฒนาโปรแกรมดังกล่าว ผู้พัฒนาทั้งหมด ได้ความรู้จากการพัฒนาโปรแกรมดังกล่าวเป็น
+                อย่างมาก ทั้งด้าน หน้าบ้านและหลังบ้าน และอัลกอริทึมในการเขียนโปรแกรมเพิ่มเติม</p>
+            
+            <h2 id="page-3"><br><br>คู่มือการใช้งาน</h2>
+                <p>เริ่มจากการ compile code แล้วจะมีไฟล์ตระกูล .exe แล้วกดเข้าใช้แอพพลิเคชั่นได้เลย
+                แอพพิลเคชั่นนี่ใช้ในการเก็บข้อมูลของนักศึกษาซึ่งมีฟังก์ชันให้เลือก 4 ฟังก์ชัน
+                <br>
+                <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280924610101278/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280924610101278/unknown.png" class="guide-app-picture">
+                </a>
+                <br>1. ถ้าหากต้องการใส่ข้อมูลนักศึกษาในโปรแกรมให้กดเลข 1 บนคีบอร์ดต่อจากนั้น
+                จะมีให้ใส่ ชื่อ อายุ เลขนักศึกษา และคะแนนที่ได้ และถ้าหากต้องการใส่ต่อให้กดปุ่ม
+                'Y' แต่ถ้าต้องการกลับไปหน้าเมนูให้กด 'M'
+                <br>
+                <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280785249370112/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280785249370112/unknown.png" class="guide-app-picture">
+                </a>
+                <br>2. ถ้าหากต้องการเปิดดูข้อมูลที่ใส่เข้าไปในโปรแกรมให้กดเลข 2 บนคีบอร์ดและ
+                จากนั้นจะมีตารางที่ใส่ข้อมูลที่เรากรอกขึ้นไปมาให้ดู และถ้าต้องการกลับหน้า
+                เมนูให้กดปุ่ม 'M'
+                <br>
+                <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280878798733422/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280878798733422/unknown.png" class="guide-app-picture">
+                </a>
+                <br>3. เป็นฟังก์ชันแก้ไขหรือ Modify ข้อมูลถ้าหากใช้ให้กดปุ่มเลข 3 บนคีบอร์ด
+                และใส่รหัสนักศึกษาที่เราต้องการแก้ไขถ้าหากใส่ไม่ถูกต้องจะมีให้กด 'Y' เพื่อใส่อีกครั้ง
+                และกด 'M' เพื่อกลับเมนูแต่ถ้าหากใส่ถูกต้องจะขึ้นให้ใส่ ชื่อ อายุ เลขนักศึกษา และ คะแนน
+                และเมื่อแก้ไขเสร็จและอยากใส่เพิ่มให้กด 'Y' เพื่อแก้คนอื่นแต่ถ้ากลับเมนูให้กด 'M'
+                <br>
+                <a href="https://cdn.discordapp.com/attachments/750412142351614163/836281126955515944/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836281126955515944/unknown.png" class="guide-app-picture">
+                </a>
+                <br>4. เป็นฟังก์ชันลบหรือ delete ข้อมูลถ้าหากต้องการใช้ให้กดปุ่มเลข 4 บนคีบอร์ด
+                และใส่รหัสนักศึกษาที่เราต้องการลบทิ้งถ้าใส่ไม่ถูกจะมีให้กด 'Y' เพื่อใส่อีกครั้ง
+                และกด 'M' เพื่อกลับเมนูแต่ถ้าหากใส่ถูกก็จะถามว่าถ้าอยากลบเพิ่มให้กดปุ่ม 'Y'
+                แต่ถ้าไม่ต้องการให้กดปุ่ม 'M'
+                <br>
+                <a href="https://cdn.discordapp.com/attachments/750412142351614163/836281266969509978/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/836281266969509978/unknown.png" class="guide-app-picture">
+                </a>
+                <br>5. ถ้าหากเราต้องการออกจากแอพพลิเคชั่นก็สามารถทำได้โดยกดเลข 5 บนคีบอร์ด
+                <h3>วิดีโอสาธิต</h3>
+                <iframe class="video" src="https://www.youtube.com/embed/3Bp56ILjrxM"></iframe>
+
+            <h2 id="page-4"><br><br>โค้ดต้นฉบับ</h2>
+            <h3>Employee Record System</h3>
+            <p>Employee Record System คือ Application ขยาดย่อมที่มี UI เป็น Terminal และสามารถสั่งการรับค่าจาก keyboard เท่านั้น
+                โดยตัว Application สามารถการเก็บข้อมูลหรือสถิติต่างๆ ไม่ว่าจะเป็นเป็นข้อมูลประเภท ข้อความ จำนวนเต็มหรือจำนวนจริง และสามารถนำมาคำนวนเพิ่มเติมได้
+                ตัว Application ถูกเขียนมาด้วยภาษา C ทั้งหมด โดยตัว Application สามารถเพิ่มข้อมูล แก้ไข ลบ หรือแสดงข้อมูลในรูปของตารางได้
+                หากต้องการสร้างฐานข้อมูลที่มี category ก็สามารถนำไปต่อยอดได้เพิ่มขึ้นโดยใช้เพียงแค่ภาษา C ภาษาเดียวก็สามารถสร้างได้</p>
+            <img src="https://www.codewithc.com/wp-content/uploads/2014/04/main-menu2.png" class="source-app-picture black-white">
+            <img src="https://www.codewithc.com/wp-content/uploads/2014/04/add-employee-record.png" class="source-app-picture black-white">
+            <a href="https://github.com/warit972177747/databasecompro/blob/main/source.c" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://cdn.discordapp.com/attachments/750412142351614163/835827784554643497/git-repository-icon-github-repo-icon-svg-115534438372aunh6vf0u_1.png" class="picture-icon black-white" style="border-radius: 0px;">
+                    <p>Source Code - Github</p>
                 </div>
-                <div class="body-line"></div>
-
-                <h2 id="page-2"><br><br>คำอธิบายโปรเจกต์</h2>
-                <p>เนื่องจากในปัจจุบันข้อมูลนั้นมีมากมายหลายประเภท จึงใช้ทรัพยากรในการจัดเก็บมากตามปริมาณของข้อมูล
-                    จึงมีหลายคนพยายามคิดค้นนวัตกรรมใหม่ๆเพื่อลดการใช้ทรัพยากรที่ใช้จัดเก็บข้อมูลได้อย่างมีประสิทธิภาพ
-                    เป็นระเบียบ และง่ายต่อการใช้งาน</p>
-                <p>เราจึงได้นำโปรแกรมจัดเก็บข้อมูลมาต่อยอดให้ใช้สำหรับจัดเก็บข้อมูลของนักศึกษา โดยมีประเภทข้อมูล
-                    ดังนี้ชื่อ อายุ รหัสนักศึกษา คะแนนและเกรด โปรแกรมนี้สามารถจัดการข้อมูลได้โดยการ เพิ่ม ลบ แก้ไข และ
-                    แสดงผลข้อมูลเป็นตาราง สร้างความสะดวกสบายให้กับผู้ใช้งานเพราะไม่ต้องจัดเก็บด้วยตัวเอง และไม่เปลือง
-                    ทรัพยากรธรรมชาติ เพราะสามารถใช้คอมพิวเตอร์แทนกระดาษในการจัดเก็บได้เพิ่มความปลอดภัยให้กับข้อมูล
-                    โดยโปรแกรมของเรานั้นมีจุดเด่นที่ UI สบายตา ใช้ง่าย เป็นมิตรกับผู้ใช้งาน</p>
-                <p>โดยสาเหตุที่เราเลือกทำโครงงานนี้ เพราะว่าเราอยากศึกษาภาษาที่ใช้ในการพัฒนาโปรแกรม นั่นคือภาษา
-                    C โดยเราได้นำโปรแกรมจัดเก็บข้อมูลของคนอื่นมาต่อยอดและปรับแต่งใหม่ให้เป็นมิตรกับผู้ใช้งานยิ่งขึ้น โดยการ
-                    เพิ่มสีสัน เพิ่มตารางในการแสดงผลข้อมูล เปลี่ยนอัลกอริทึม ฯลฯ</p>
-                <p>ผลลัพธ์จากการพัฒนาโปรแกรมดังกล่าว ผู้พัฒนาทั้งหมด ได้ความรู้จากการพัฒนาโปรแกรมดังกล่าวเป็น
-                    อย่างมาก ทั้งด้าน หน้าบ้านและหลังบ้าน และอัลกอริทึมในการเขียนโปรแกรมเพิ่มเติม</p>
-                
-                <h2 id="page-3"><br><br>คู่มือการใช้งาน</h2>
-                    <p>เริ่มจากการ compile code แล้วจะมีไฟล์ตระกูล .exe แล้วกดเข้าใช้แอพพลิเคชั่นได้เลย
-                    แอพพิลเคชั่นนี่ใช้ในการเก็บข้อมูลของนักศึกษาซึ่งมีฟังก์ชันให้เลือก 4 ฟังก์ชัน
-                    <br>
-                    <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280924610101278/unknown.png">
-                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280924610101278/unknown.png" class="guide-app-picture">
-                    </a>
-                    <br>1. ถ้าหากต้องการใส่ข้อมูลนักศึกษาในโปรแกรมให้กดเลข 1 บนคีบอร์ดต่อจากนั้น
-                    จะมีให้ใส่ ชื่อ อายุ เลขนักศึกษา และคะแนนที่ได้ และถ้าหากต้องการใส่ต่อให้กดปุ่ม
-                    'Y' แต่ถ้าต้องการกลับไปหน้าเมนูให้กด 'M'
-                    <br>
-                    <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280785249370112/unknown.png">
-                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280785249370112/unknown.png" class="guide-app-picture">
-                    </a>
-                    <br>2. ถ้าหากต้องการเปิดดูข้อมูลที่ใส่เข้าไปในโปรแกรมให้กดเลข 2 บนคีบอร์ดและ
-                    จากนั้นจะมีตารางที่ใส่ข้อมูลที่เรากรอกขึ้นไปมาให้ดู และถ้าต้องการกลับหน้า
-                    เมนูให้กดปุ่ม 'M'
-                    <br>
-                    <a href="https://cdn.discordapp.com/attachments/750412142351614163/836280878798733422/unknown.png">
-                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836280878798733422/unknown.png" class="guide-app-picture">
-                    </a>
-                    <br>3. เป็นฟังก์ชันแก้ไขหรือ Modify ข้อมูลถ้าหากใช้ให้กดปุ่มเลข 3 บนคีบอร์ด
-                    และใส่รหัสนักศึกษาที่เราต้องการแก้ไขถ้าหากใส่ไม่ถูกต้องจะมีให้กด 'Y' เพื่อใส่อีกครั้ง
-                    และกด 'M' เพื่อกลับเมนูแต่ถ้าหากใส่ถูกต้องจะขึ้นให้ใส่ ชื่อ อายุ เลขนักศึกษา และ คะแนน
-                    และเมื่อแก้ไขเสร็จและอยากใส่เพิ่มให้กด 'Y' เพื่อแก้คนอื่นแต่ถ้ากลับเมนูให้กด 'M'
-                    <br>
-                    <a href="https://cdn.discordapp.com/attachments/750412142351614163/836281126955515944/unknown.png">
-                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836281126955515944/unknown.png" class="guide-app-picture">
-                    </a>
-                    <br>4. เป็นฟังก์ชันลบหรือ delete ข้อมูลถ้าหากต้องการใช้ให้กดปุ่มเลข 4 บนคีบอร์ด
-                    และใส่รหัสนักศึกษาที่เราต้องการลบทิ้งถ้าใส่ไม่ถูกจะมีให้กด 'Y' เพื่อใส่อีกครั้ง
-                    และกด 'M' เพื่อกลับเมนูแต่ถ้าหากใส่ถูกก็จะถามว่าถ้าอยากลบเพิ่มให้กดปุ่ม 'Y'
-                    แต่ถ้าไม่ต้องการให้กดปุ่ม 'M'
-                    <br>
-                    <a href="https://cdn.discordapp.com/attachments/750412142351614163/836281266969509978/unknown.png">
-                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/836281266969509978/unknown.png" class="guide-app-picture">
-                    </a>
-                    <br>5. ถ้าหากเราต้องการออกจากแอพพลิเคชั่นก็สามารถทำได้โดยกดเลข 5 บนคีบอร์ด
-                    <h3>วิดีโอสาธิต</h3>
-                    <iframe class="video" src="https://www.youtube.com/embed/3Bp56ILjrxM"></iframe>
-
-                <h2 id="page-4"><br><br>โค้ดต้นฉบับ</h2>
-                <h3>Employee Record System</h3>
-                <p>Employee Record System คือ Application ขยาดย่อมที่มี UI เป็น Terminal และสามารถสั่งการรับค่าจาก keyboard เท่านั้น
-                    โดยตัว Application สามารถการเก็บข้อมูลหรือสถิติต่างๆ ไม่ว่าจะเป็นเป็นข้อมูลประเภท ข้อความ จำนวนเต็มหรือจำนวนจริง และสามารถนำมาคำนวนเพิ่มเติมได้
-                    ตัว Application ถูกเขียนมาด้วยภาษา C ทั้งหมด โดยตัว Application สามารถเพิ่มข้อมูล แก้ไข ลบ หรือแสดงข้อมูลในรูปของตารางได้
-                    หากต้องการสร้างฐานข้อมูลที่มี category ก็สามารถนำไปต่อยอดได้เพิ่มขึ้นโดยใช้เพียงแค่ภาษา C ภาษาเดียวก็สามารถสร้างได้</p>
-                <img src="https://www.codewithc.com/wp-content/uploads/2014/04/main-menu2.png" class="source-app-picture black-white">
-                <img src="https://www.codewithc.com/wp-content/uploads/2014/04/add-employee-record.png" class="source-app-picture black-white">
-                <a href="https://github.com/warit972177747/databasecompro/blob/main/source.c" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://cdn.discordapp.com/attachments/750412142351614163/835827784554643497/git-repository-icon-github-repo-icon-svg-115534438372aunh6vf0u_1.png" class="picture-icon black-white" style="border-radius: 0px;">
-                        <p>Source Code - Github</p>
-                    </div>
-                </a>
-                <a href="https://www.codewithc.com/mini-project-in-c-employee-record-system/" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://static.thenounproject.com/png/2391755-200.png" class="picture-icon black-white" style="border-radius: 0px;">
-                        <p>Source Code - Website</p>
-                    </div>
-                </a>
-                <h2 id="page-5"><br><br>เกี่ยวกับ</h2>
-                <h3>คณะผู้จัดทำ</h3>
-                <a href="https://github.com/pithawat565" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
-                        <p>นายพิทวัท นุชคง รหัสนักศึกษา 63070118</p>
-                    </div>
-                </a>
-                <a href="https://github.com/panupongkeawkam" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
-                        <p>นายภาณุพงศ์ แก้วคำ รหัสนักศึกษา 63070132</p>
-                    </div>
-                </a>
-                <a href="https://github.com/rip086336" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
-                        <p>นายยศพล เอี่ยมอ่อน รหัสนักศึกษา 63070142</p>
-                    </div>
-                </a>
-                <a href="https://github.com/warit972177747" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
-                        <p>นายวริศ อมรธนะภิญโญ รหัสนักศึกษา 63070157</p>
-                    </div>
-                </a>
-                <h3>สถานศึกษา</h3>
-                <a href="http://kmitl.ac.th/en" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://www.wallofsharing.com/wp-content/uploads/2019/10/kmitl_logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
-                        <p>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหาร ลาดกระบัง</p>
-                    </div>
-                </a>
-                <h3>คณะ</h3>
-                <a href="https://www.it.kmitl.ac.th/th/" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/it-logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
-                        <p>เทคโนโลยีสารสนเทศ</p>
-                    </div>
-                </a>
-                <h3>ภาควิชา</h3>
-                <a href="https://www.it.kmitl.ac.th/subjects/6016315-computer-programming/" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://www.pngkit.com/png/full/101-1010012_c-programming-icon-c-programming-language-logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
-                        <p>Computer Programming</p>
-                    </div>
-                </a>
-                <h3>อาจารย์ประจำวิชา</h3>
-                <a href="https://www.it.kmitl.ac.th/th/staff/panwit/" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/Panwit-300x300.jpg" class="picture-icon">
-                        <p>อาจารย์ปานวิทย์ ธุวะนุติ</p>
-                    </div>
-                </a>
-                <a href="https://www.it.kmitl.ac.th/th/staff/kitsuchart/" target="_blank" class="unline-linking">
-                    <div class="link-tage">
-                        <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2018/03/Kitsuchart-300x300.jpg" class="picture-icon">
-                        <p>อาจารย์กิติ์สุชาต พสุภา</p>
-                    </div>
-                </a>
-            </div>
+            </a>
+            <a href="https://www.codewithc.com/mini-project-in-c-employee-record-system/" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://static.thenounproject.com/png/2391755-200.png" class="picture-icon black-white" style="border-radius: 0px;">
+                    <p>Source Code - Website</p>
+                </div>
+            </a>
+            <h2 id="page-5"><br><br>เกี่ยวกับ</h2>
+            <h3>คณะผู้จัดทำ</h3>
+            <a href="https://github.com/pithawat565" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
+                    <p>นายพิทวัท นุชคง รหัสนักศึกษา 63070118</p>
+                </div>
+            </a>
+            <a href="https://github.com/panupongkeawkam" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
+                    <p>นายภาณุพงศ์ แก้วคำ รหัสนักศึกษา 63070132</p>
+                </div>
+            </a>
+            <a href="https://github.com/rip086336" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
+                    <p>นายยศพล เอี่ยมอ่อน รหัสนักศึกษา 63070142</p>
+                </div>
+            </a>
+            <a href="https://github.com/warit972177747" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://cdn0.iconfinder.com/data/icons/octicons/1024/mark-github-512.png" class="picture-icon black-white">
+                    <p>นายวริศ อมรธนะภิญโญ รหัสนักศึกษา 63070157</p>
+                </div>
+            </a>
+            <h3>สถานศึกษา</h3>
+            <a href="http://kmitl.ac.th/en" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://www.wallofsharing.com/wp-content/uploads/2019/10/kmitl_logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
+                    <p>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหาร ลาดกระบัง</p>
+                </div>
+            </a>
+            <h3>คณะ</h3>
+            <a href="https://www.it.kmitl.ac.th/th/" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/it-logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
+                    <p>เทคโนโลยีสารสนเทศ</p>
+                </div>
+            </a>
+            <h3>ภาควิชา</h3>
+            <a href="https://www.it.kmitl.ac.th/subjects/6016315-computer-programming/" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://www.pngkit.com/png/full/101-1010012_c-programming-icon-c-programming-language-logo.png" class="picture-icon" style="border-radius: 0px; width: 36px;">
+                    <p>Computer Programming</p>
+                </div>
+            </a>
+            <h3>อาจารย์ประจำวิชา</h3>
+            <a href="https://www.it.kmitl.ac.th/th/staff/panwit/" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2017/12/Panwit-300x300.jpg" class="picture-icon">
+                    <p>อาจารย์ปานวิทย์ ธุวะนุติ</p>
+                </div>
+            </a>
+            <a href="https://www.it.kmitl.ac.th/th/staff/kitsuchart/" target="_blank" class="unline-linking">
+                <div class="link-tage">
+                    <img src="https://www.it.kmitl.ac.th/wp-content/uploads/2018/03/Kitsuchart-300x300.jpg" class="picture-icon">
+                    <p>อาจารย์กิติ์สุชาต พสุภา</p>
+                </div>
+            </a>
         </div>
         <div id="page-6" class="foot-contain"><span class="foot-title">Contact Us</span>
             <div class="foot-line"></div>
@@ -287,7 +284,7 @@
 
         .head-title {
             overflow: hidden;
-            padding: 10px;
+            padding: 10px 0px 10px 0px;
             background: var(--color-2);
             width: 100%;
             height: 80px;
@@ -309,10 +306,11 @@
 
         .page-bar {
             top: 0;
-            z-index: 5;
+            z-index: 2;
             position: sticky;
             text-align: center;
-            width: 100%;
+            width: 64%;
+            margin: auto;
             height: 2.4vw;
         }
         .page-bar-direction {
@@ -322,28 +320,21 @@
             font-size: 1.4vw;
             color: var(--color-primary);
             font-family: 'Kanit', sans-serif;
-            text-decoration: none;
             opacity: 80%;
-            margin: auto;
             float: left;
         }
         .page-bar-direction:hover {
             color: var(--color-1);
-            font-size: 28px;
+            font-size: 1.5vw;
             background: var(--color-direc-hover);;
-            cursor: pointer;
         }
 
-        .body-contain {
-            width: 64%;
-            margin: auto;
-            height: 5200px;
-            background: var(--color-primary);
-        }
         .material {
             font-family: 'Kanit', sans-serif;
-            margin: 5%;
-            width: 90%;
+            padding: 4%;
+            width: 56%;
+            background-color: var(--color-primary);
+            margin: 0% 18% 0% 18%;
         }
         .application-contain {
             width: 100%;
@@ -361,8 +352,6 @@
             animation: up-down 1s infinite alternate;
         }
         .application-button:hover {
-            transform-origin: center;
-            transform: scale(1.04);
             color: var(--color-1);
         }
         .body-line {
@@ -376,8 +365,7 @@
         }
 
         .link-tage {
-            padding: 10px;
-            margin: 5px;
+            padding: 1% 2% 1% 2%;
             border-radius: 10px;
             width: 96%;
             height: 32px;
@@ -403,21 +391,19 @@
         }
 
         .foot-contain {
-            position: relative;
-            width: 100%;
+            padding: 0% 5% 0% 5%;
+            width: 90%;
             height: 260px;
             background: #2e2e2e;
         }
         .foot-title {
-            padding: 16px;
-            margin: auto;
             font-family: 'Quicksand', sans-serif;
             font-size: 48px;
             color: #dbdbdb;
         }
         .foot-line {
-            width: 80%;
-            margin: 12px;
+            width: 100%;
+            margin: 12px 0px 12px 0px;
             height: 3px;
             background: #dbdbdb;
             border-radius: 20px;
@@ -426,9 +412,8 @@
             font-family: 'Kanit', sans-serif;
             color: #dbdbdb;
             float: left;
-            margin: 1%;
-            margin-top: 0%;
             width: 18%;
+            margin: 12px;
             height: 148px;
         }
         .foot-contact-icon {
@@ -436,25 +421,18 @@
             margin-right: 16px;
             border-radius: 100%;
             width: 40px;
-            position: relative;
         }
         .foot-contact-icon:hover {
-            transform-origin: center;
             transform: scale(1.1);
         }
 
-        .source-app-picture {
-            margin-top: 1%;
-            margin-bottom: 1%;
-            margin-left: 7%;
-            width: 40%;
-        }
         .guide-app-picture {
-            margin-top: 16px;
-            margin-left: 25%;
-            margin-right: 25%;
-            margin-bottom: 16px;
+            margin: 16px 25% 16px 25%;
             width: 50%;
+        }
+        .source-app-picture {
+            margin: 1% 4.5% 1% 4.5%;
+            width: 40%;
         }
         .application-link-picture {
             width: 60%;
@@ -479,7 +457,7 @@
             position: fixed;
             right: 18px;
             top: 18px;
-            border-radius: 32px;
+            border-radius: 100%;
             cursor: pointer;
             background-position: center;
             background-size: 24px;
@@ -532,7 +510,7 @@
         }
     </style>
     <script>
-        function myFunction() {
+        function themeMode() {
             var x1 = document.getElementById("dot");
             var x2 = document.getElementById("pad");
             var variable = document.querySelector(':root');
