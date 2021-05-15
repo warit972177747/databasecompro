@@ -1,2 +1,5 @@
-<h1 style="color: blue">DATA BASE - Student Grading Application</h1>
-<h2 style="text-indent: 16px">นายพิท</h2>
+# **DATA BASE - Student Grading Application**
+> นายพิทวัท นุชคง รหัสนักศึกษา 63070118
+> นายภาณุพงศ์ แก้วคำ รหัสนักศึกษา 63070132
+> นายยศพล เอี่ยมอ่อน รหัสนักศึกษา 6307014
+> นายวริศ อมรธนะภิญโญ รหัสนักศึกษา 63070157
